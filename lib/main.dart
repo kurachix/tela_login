@@ -61,6 +61,26 @@ class _SplashPageState extends State<SplashPage> {
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
+  void _showLoadingAndNavigate(BuildContext context, String route) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Center(
+          child: CircularProgressIndicator(
+            color: Colors.black,
+            strokeWidth: 3,
+          ),
+        );
+      },
+    );
+
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.pop(context);
+      Navigator.pushNamed(context, route);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -162,7 +182,9 @@ class MyHomePage extends StatelessWidget {
                   height: 55,
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: null,
+                    onPressed: () {
+                      _showLoadingAndNavigate(context, '/login');
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
                       disabledBackgroundColor: Colors.black,
@@ -187,7 +209,7 @@ class MyHomePage extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/cadastro');
+                        _showLoadingAndNavigate(context, '/cadastro');
                       },
                       child: Text(
                         'Cadastre-se',
@@ -199,7 +221,7 @@ class MyHomePage extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/recuperacao');
+                        _showLoadingAndNavigate(context, '/recuperacao');
                       },
                       child: Text(
                         'Esqueceu a senha?',
@@ -222,6 +244,26 @@ class MyHomePage extends StatelessWidget {
 
 class CadastroPage extends StatelessWidget {
   const CadastroPage({super.key});
+
+  void _showLoadingAndNavigate(BuildContext context, String route) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Center(
+          child: CircularProgressIndicator(
+            color: Colors.black,
+            strokeWidth: 3,
+          ),
+        );
+      },
+    );
+
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.pop(context);
+      Navigator.pushNamed(context, route);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -411,7 +453,9 @@ class CadastroPage extends StatelessWidget {
                   height: 55,
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: null,
+                    onPressed: () {
+                      _showLoadingAndNavigate(context, '/login');
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
                       disabledBackgroundColor: Colors.black,
@@ -442,6 +486,26 @@ class CadastroPage extends StatelessWidget {
 
 class RecuperacaoPage extends StatelessWidget {
   const RecuperacaoPage({super.key});
+
+  void _showLoadingAndNavigate(BuildContext context, String route) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Center(
+          child: CircularProgressIndicator(
+            color: Colors.black,
+            strokeWidth: 3,
+          ),
+        );
+      },
+    );
+
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.pop(context);
+      Navigator.pushNamed(context, route);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -504,7 +568,9 @@ class RecuperacaoPage extends StatelessWidget {
                   height: 55,
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: null,
+                    onPressed: () {
+                      _showLoadingAndNavigate(context, '/login');
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
                       disabledBackgroundColor: Colors.black,
