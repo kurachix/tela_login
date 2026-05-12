@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       home: const MyHomePage(),
       routes: {
         '/cadastro': (context) => const CadastroPage(),
+        '/recuperacao': (context) => const RecuperacaoPage(),
       },
     );
   }
@@ -82,7 +83,7 @@ class MyHomePage extends StatelessWidget {
                       contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.5),
+                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -113,7 +114,7 @@ class MyHomePage extends StatelessWidget {
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.8),
                       ),
                     ),
                   ),
@@ -160,7 +161,7 @@ class MyHomePage extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/cadastro');
+                        Navigator.pushNamed(context, '/recuperacao');
                       },
                       child: Text(
                         'Esqueceu a senha?',
@@ -232,7 +233,7 @@ class CadastroPage extends StatelessWidget {
                       contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.5),
+                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -256,7 +257,7 @@ class CadastroPage extends StatelessWidget {
                       contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.5),
+                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -280,7 +281,7 @@ class CadastroPage extends StatelessWidget {
                       contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.5),
+                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -304,7 +305,7 @@ class CadastroPage extends StatelessWidget {
                       contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.5),
+                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -335,7 +336,7 @@ class CadastroPage extends StatelessWidget {
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.8),
                       ),
                     ),
                   ),
@@ -362,7 +363,7 @@ class CadastroPage extends StatelessWidget {
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.8),
                       ),
                     ),
                   ),
@@ -383,6 +384,99 @@ class CadastroPage extends StatelessWidget {
                     ),
                     child: Text(
                       'Cadastrar',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 16),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class RecuperacaoPage extends StatelessWidget {
+  const RecuperacaoPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          Container(
+            height: 310,
+            color: Color(0xFF0B3D91),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 28),
+                Image.asset('img/senai.png', width: 230, fit: BoxFit.contain),
+                const SizedBox(height: 14),
+                const Text(
+                  'Recuperação de Senha',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 54),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('E-mail:', style: TextStyle(fontSize: 20)),
+                SizedBox(height: 12),
+                SizedBox(
+                  height: 59,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Insira seu email:',
+                      hintStyle: TextStyle(
+                        color: Color(0xFF8A8A8A),
+                        fontSize: 16,
+                      ),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.8),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 42),
+                SizedBox(
+                  height: 55,
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: null,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      disabledBackgroundColor: Colors.black,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      elevation: 0,
+                    ),
+                    child: Text(
+                      'Enviar',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
