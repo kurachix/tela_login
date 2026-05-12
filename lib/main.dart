@@ -11,11 +11,49 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: const SplashPage(),
       routes: {
+        '/login': (context) => const MyHomePage(),
         '/cadastro': (context) => const CadastroPage(),
         '/recuperacao': (context) => const RecuperacaoPage(),
       },
+    );
+  }
+}
+
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
+
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.pushReplacementNamed(context, '/login');
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('img/senai.png', width: 230, fit: BoxFit.contain),
+            SizedBox(height: 80),
+            CircularProgressIndicator(
+              color: Colors.black,
+              strokeWidth: 3,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
