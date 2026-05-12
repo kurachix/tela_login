@@ -207,18 +207,6 @@ class CadastroPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 54),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              'Crie sua Conta!',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
           const SizedBox(height: 42),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
@@ -239,11 +227,11 @@ class CadastroPage extends StatelessWidget {
                       contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Colors.red, width: 1.5),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.5),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
-                        borderSide: BorderSide(color: Colors.red, width: 1.8),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.8),
                       ),
                     ),
                   ),
@@ -282,8 +270,8 @@ class CadastroPage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: null,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.red,
-                      disabledBackgroundColor: Colors.red,
+                      backgroundColor: Colors.black,
+                      disabledBackgroundColor: Colors.black,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
