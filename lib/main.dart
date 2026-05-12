@@ -213,13 +213,85 @@ class CadastroPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Email:', style: TextStyle(fontSize: 20)),
+                Text('Nome:', style: TextStyle(fontSize: 20)),
+                SizedBox(height: 12),
+                SizedBox(
+                  height: 59,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Insira seu nome:',
+                      hintStyle: TextStyle(
+                        color: Color(0xFF8A8A8A),
+                        fontSize: 16,
+                      ),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.5),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.8),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 22),
+                Text('Sobrenome:', style: TextStyle(fontSize: 20)),
+                SizedBox(height: 12),
+                SizedBox(
+                  height: 59,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Insira seu sobrenome:',
+                      hintStyle: TextStyle(
+                        color: Color(0xFF8A8A8A),
+                        fontSize: 16,
+                      ),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.5),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.8),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 22),
+                Text('E-mail:', style: TextStyle(fontSize: 20)),
                 SizedBox(height: 12),
                 SizedBox(
                   height: 59,
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: 'Insira seu email:',
+                      hintStyle: TextStyle(
+                        color: Color(0xFF8A8A8A),
+                        fontSize: 16,
+                      ),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.5),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Color(0xFFFF9800), width: 1.8),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 22),
+                Text('Telefone:', style: TextStyle(fontSize: 20)),
+                SizedBox(height: 12),
+                SizedBox(
+                  height: 59,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Insira seu telefone:',
                       hintStyle: TextStyle(
                         color: Color(0xFF8A8A8A),
                         fontSize: 16,
@@ -245,6 +317,33 @@ class CadastroPage extends StatelessWidget {
                     obscureText: true,
                     decoration: InputDecoration(
                       hintText: 'Insira sua senha:',
+                      hintStyle: TextStyle(
+                        color: Color(0xFF8A8A8A),
+                        fontSize: 16,
+                      ),
+                      filled: true,
+                      fillColor: Color(0xFFF5F5F5),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Color(0xFFF5F5F5), width: 1),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 22),
+                Text('Confirmar senha:', style: TextStyle(fontSize: 20)),
+                SizedBox(height: 12),
+                SizedBox(
+                  height: 59,
+                  child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: 'Confirme sua senha:',
                       hintStyle: TextStyle(
                         color: Color(0xFF8A8A8A),
                         fontSize: 16,
