@@ -40,7 +40,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.red,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +48,7 @@ class _SplashPageState extends State<SplashPage> {
             Image.asset('img/senai.png', width: 230, fit: BoxFit.contain),
             SizedBox(height: 80),
             CircularProgressIndicator(
-              color: Colors.black,
+              color: Colors.white,
               strokeWidth: 3,
             ),
           ],
