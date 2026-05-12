@@ -158,11 +158,16 @@ class MyHomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Text(
-                      'Esqueceu a senha?',
-                      style: TextStyle(
-                        color: Color(0xFF173B9A),
-                        fontSize: 18,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/cadastro');
+                      },
+                      child: Text(
+                        'Esqueceu a senha?',
+                        style: TextStyle(
+                          color: Color(0xFF173B9A),
+                          fontSize: 18,
+                        ),
                       ),
                     ),
                   ],
@@ -387,20 +392,6 @@ class CadastroPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Center(
-                    child: Text(
-                      'Voltar ao Login',
-                      style: TextStyle(
-                        color: Color(0xFF173B9A),
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                ),
               ],
             ),
           ),
