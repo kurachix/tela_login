@@ -61,26 +61,6 @@ class _SplashPageState extends State<SplashPage> {
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
-  void _showLoadingAndNavigate(BuildContext context, String route) {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (BuildContext context) {
-        return Center(
-          child: CircularProgressIndicator(
-            color: Colors.black,
-            strokeWidth: 3,
-          ),
-        );
-      },
-    );
-
-    Future.delayed(Duration(seconds: 3), () {
-      Navigator.pop(context);
-      Navigator.pushNamed(context, route);
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -183,7 +163,7 @@ class MyHomePage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      _showLoadingAndNavigate(context, '/login');
+                      Navigator.pushNamed(context, '/login');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
@@ -209,7 +189,7 @@ class MyHomePage extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        _showLoadingAndNavigate(context, '/cadastro');
+                        Navigator.pushNamed(context, '/cadastro');
                       },
                       child: Text(
                         'Cadastre-se',
@@ -221,7 +201,7 @@ class MyHomePage extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        _showLoadingAndNavigate(context, '/recuperacao');
+                        Navigator.pushNamed(context, '/recuperacao');
                       },
                       child: Text(
                         'Esqueceu a senha?',
@@ -244,26 +224,6 @@ class MyHomePage extends StatelessWidget {
 
 class CadastroPage extends StatelessWidget {
   const CadastroPage({super.key});
-
-  void _showLoadingAndNavigate(BuildContext context, String route) {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (BuildContext context) {
-        return Center(
-          child: CircularProgressIndicator(
-            color: Colors.black,
-            strokeWidth: 3,
-          ),
-        );
-      },
-    );
-
-    Future.delayed(Duration(seconds: 3), () {
-      Navigator.pop(context);
-      Navigator.pushNamed(context, route);
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -454,7 +414,7 @@ class CadastroPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      _showLoadingAndNavigate(context, '/login');
+                      Navigator.pushNamed(context, '/login');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
@@ -486,26 +446,6 @@ class CadastroPage extends StatelessWidget {
 
 class RecuperacaoPage extends StatelessWidget {
   const RecuperacaoPage({super.key});
-
-  void _showLoadingAndNavigate(BuildContext context, String route) {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (BuildContext context) {
-        return Center(
-          child: CircularProgressIndicator(
-            color: Colors.black,
-            strokeWidth: 3,
-          ),
-        );
-      },
-    );
-
-    Future.delayed(Duration(seconds: 3), () {
-      Navigator.pop(context);
-      Navigator.pushNamed(context, route);
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -569,7 +509,7 @@ class RecuperacaoPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      _showLoadingAndNavigate(context, '/login');
+                      Navigator.pushNamed(context, '/login');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
